@@ -6,12 +6,12 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 23:10:02 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/06 02:01:25 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:50:03 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <limits.h> 
+#include <limits.h>
 
 void    ft_stack_add_front(t_stack_node **lst, t_stack_node *new)
 {
@@ -40,16 +40,8 @@ void    ft_stack_add_back(t_stack_node **lst, t_stack_node *new)
     {
         last = ft_stack_last(*lst);
         last->next = new;
-        new->prev = last; 
+        new->prev = last;
     }
-}
-
-void    handle_error(t_stack_node **stack)
-{
-    if (stack)
-        ft_stack_clear(stack);
-    write(2, "Error\n", 6);
-    exit(1);
 }
 
 static long	ft_check_sign_digit(const char *str, int *i,
