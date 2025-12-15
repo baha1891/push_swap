@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 22:20:22 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/10 16:25:42 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/14 14:21:22 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+#include <stdbool.h>
 
 typedef struct s_stack_node
 {
@@ -43,5 +44,24 @@ t_stack_node	*ft_stack_last(t_stack_node *lst);
 void	init_stack_a(t_stack_node **a, char **argv);
 int		error_duplicate(t_stack_node *a, int n);
 size_t	ft_strlcpy(char *dest, const char *src, size_t destsize);
+
+/* Operations helpers */
+void	ft_swap(t_stack_node **stack);
+void	ft_push(t_stack_node **from, t_stack_node **to);
+void	ft_rotate(t_stack_node **stack);
+void	ft_rev_rotate(t_stack_node **stack);
+
+/* Operation wrappers (print operations) */
+void	sa(t_stack_node **a);
+void	sb(t_stack_node **b);
+void	ss(t_stack_node **a, t_stack_node **b);
+void	pa(t_stack_node **a, t_stack_node **b);
+void	pb(t_stack_node **a, t_stack_node **b);
+void	ra(t_stack_node **a);
+void	rb(t_stack_node **b);
+void	rr(t_stack_node **a, t_stack_node **b);
+void	rra(t_stack_node **a);
+void	rrb(t_stack_node **b);
+void	rrr(t_stack_node **a, t_stack_node **b);
 
 #endif
