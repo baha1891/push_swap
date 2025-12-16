@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 23:36:57 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 23:47:08 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/17 02:19:39 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	rotate_both(t_stack_node **a, t_stack_node **b,
 		t_stack_node *cheapest_node)
 {
 	while (*b != cheapest_node->target_node && *a != cheapest_node)
-		rr(a, b);
+		rr(a, b, true);
 	current_index(*a);
 	current_index(*b);
 }
@@ -25,12 +25,12 @@ static void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
 		t_stack_node *cheapest_node)
 {
 	while (*b != cheapest_node->target_node && *a != cheapest_node)
-		rrr(a, b);
+		rrr(a, b, true);
 	current_index(*a);
 	current_index(*b);
 }
 
-static void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
+void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
 		char stack_name)
 {
 	while (*stack != top_node)
@@ -38,16 +38,16 @@ static void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
 		if (stack_name == 'a')
 		{
 			if (top_node->above_median)
-				ra(stack);
+				ra(stack, true);
 			else
-				rra(stack);
+				rra(stack, true);
 		}
 		else if (stack_name == 'b')
 		{
 			if (top_node->above_median)
-				rb(stack);
+				rb(stack, true);
 			else
-				rrb(stack);
+				rrb(stack, true);
 		}
 	}
 }

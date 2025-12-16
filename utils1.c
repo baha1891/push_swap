@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 23:05:53 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 23:39:31 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/17 02:25:19 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ t_stack_node	*ft_stack_new(int value)
 		return (NULL);
 	node->value = value;
 	node->index = 0;
-	node->pos = 0;
-	node->cost = 0;
-	node->target_pos = 0;
+	node->push_cost = 0;
+	node->cheapest = false;
 	node->target_node = NULL;
 	node->next = NULL;
 	node->prev = NULL;

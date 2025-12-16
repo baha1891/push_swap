@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 18:55:07 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 23:40:33 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/17 02:24:18 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,24 @@ static void	ft_rotate(t_stack_node **stack)
 	first->next = NULL;
 }
 
-void	ra(t_stack_node **a)
+void	ra(t_stack_node **a, bool print)
 {
 	ft_rotate(a);
-	write(1, "ra\n", 3);
+	if (print)
+		write(1, "ra\n", 3);
 }
 
-void	rb(t_stack_node **b)
+void	rb(t_stack_node **b, bool print)
 {
 	ft_rotate(b);
-	write(1, "rb\n", 3);
+	if (print)
+		write(1, "rb\n", 3);
 }
 
-void	rr(t_stack_node **a, t_stack_node **b)
+void	rr(t_stack_node **a, t_stack_node **b, bool print)
 {
 	ft_rotate(a);
 	ft_rotate(b);
-	write(1, "rr\n", 3);
+	if (print)
+		write(1, "rr\n", 3);
 }
