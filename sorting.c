@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 19:37:27 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 19:46:45 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 20:13:23 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ void	sort_three(t_stack_node **a)
 
 	highest_node = find_highest(*a);
 	if (*a == highest_node)
-		ra(a);
+		ra(a, 0);
 	else if ((*a)->next == highest_node)
-		rra(a);
+		rra(a, 0);
 	if ((*a)->value > (*a)->next->value)
-		sa(a);
+		sa(a, 0);
 }
