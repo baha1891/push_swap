@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 22:20:22 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 20:23:34 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 23:39:02 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ typedef struct s_stack_node
 {
 	int					value;
 	int					index;
-	int					pos;
-	int					cost;
-	int					target_pos;
+	int					push_cost;
+	int					above_median;
+	int					cheapest;
 	struct s_stack_node	*target_node;
 	struct s_stack_node	*next;
 	struct s_stack_node	*prev;
