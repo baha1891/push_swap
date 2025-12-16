@@ -6,12 +6,11 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 23:10:02 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 20:04:57 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 20:37:19 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <limits.h>
 
 void	ft_stack_add_front(t_stack_node **lst, t_stack_node *new)
 {

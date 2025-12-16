@@ -6,12 +6,11 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 21:26:10 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 16:42:13 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 20:36:20 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stddef.h>
 
 static size_t	ft_strlen(const char *str)
 {
