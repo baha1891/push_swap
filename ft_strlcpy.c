@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 21:26:10 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/10 19:07:48 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 16:42:13 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 	i = ft_strlen(src);
 	return (i);
 }
-

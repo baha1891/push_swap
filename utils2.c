@@ -6,46 +6,46 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 23:10:02 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/10 15:50:03 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 16:19:45 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <limits.h>
 
-void    ft_stack_add_front(t_stack_node **lst, t_stack_node *new)
+void	ft_stack_add_front(t_stack_node **lst, t_stack_node *new)
 {
-    if (!lst || !new)
-        return ;
-    new->next = *lst;
-    if (*lst)
-        (*lst)->prev = new;
-    *lst = new;
-    new->prev = NULL;
+	if (!lst || !new)
+		return ;
+	new->next = *lst;
+	if (*lst)
+		(*lst)->prev = new;
+	*lst = new;
+	new->prev = NULL;
 }
 
-void    ft_stack_add_back(t_stack_node **lst, t_stack_node *new)
+void	ft_stack_add_back(t_stack_node **lst, t_stack_node *new)
 {
-    t_stack_node    *last;
+	t_stack_node	*last;
 
-    if (!lst || !new)
-        return ;
-    new->next = NULL;
-    if (*lst == NULL)
-    {
-        *lst = new;
-        new->prev = NULL;
-    }
-    else
-    {
-        last = ft_stack_last(*lst);
-        last->next = new;
-        new->prev = last;
-    }
+	if (!lst || !new)
+		return ;
+	new->next = NULL;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		new->prev = NULL;
+	}
+	else
+	{
+		last = ft_stack_last(*lst);
+		last->next = new;
+		new->prev = last;
+	}
 }
 
 static long	ft_check_sign_digit(const char *str, int *i,
-		t_stack_node **stack)
+			t_stack_node **stack)
 {
 	long	sign;
 

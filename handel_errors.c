@@ -6,19 +6,20 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 15:49:19 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/14 01:40:46 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 16:18:55 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    handle_error(t_stack_node **stack)
+void	handle_error(t_stack_node **stack)
 {
-    if (stack)
-        ft_stack_clear(stack);
-    write(2, "Error\n", 6);
-    exit(1);
+	if (stack)
+		ft_stack_clear(stack);
+	write(2, "Error\n", 6);
+	exit(1);
 }
+
 int	error_duplicate(t_stack_node *a, int n)
 {
 	if (!a)
@@ -26,8 +27,8 @@ int	error_duplicate(t_stack_node *a, int n)
 	while (a)
 	{
 		if (a->value == n)
-			return (1); // وجدنا تكرار!
+			return (1);
 		a = a->next;
 	}
-	return (0); // لا يوجد تكرار
+	return (0);
 }
