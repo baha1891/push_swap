@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 23:05:53 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 16:25:18 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 20:02:57 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,11 @@ int	ft_stack_size(t_stack_node *lst)
 	return (count);
 }
 
+int	stack_len(t_stack_node *stack)
+{
+	return (ft_stack_size(stack));
+}
+
 t_stack_node	*ft_stack_last(t_stack_node *lst)
 {
 	if (!lst)
@@ -50,13 +55,6 @@ t_stack_node	*ft_stack_last(t_stack_node *lst)
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
-}
-
-void	ft_delone(t_stack_node *node)
-{
-	if (!node)
-		return ;
-	free(node);
 }
 
 void	ft_stack_clear(t_stack_node **lst)

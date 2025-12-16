@@ -1,36 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/10 19:08:15 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 19:53:12 by balsayed         ###   ########.fr       */
+/*   Created: 2025/12/16 19:37:27 by balsayed          #+#    #+#             */
+/*   Updated: 2025/12/16 19:46:45 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-t_stack_node	*find_highest(t_stack_node *stack)
-{
-	long			highest;
-	t_stack_node	*highest_node;
-
-	if (!stack)
-		return (NULL);
-	highest = LONG_MIN;
-	while (stack)
-	{
-		if (stack->value > highest)
-		{
-			highest = stack->value;
-			highest_node = stack;
-		}
-		stack = stack->next;
-	}
-	return (highest_node);
-}
 
 bool	stack_sorted(t_stack_node *stack)
 {
@@ -43,4 +23,17 @@ bool	stack_sorted(t_stack_node *stack)
 		stack = stack->next;
 	}
 	return (true);
+}
+
+void	sort_three(t_stack_node **a)
+{
+	t_stack_node	*highest_node;
+
+	highest_node = find_highest(*a);
+	if (*a == highest_node)
+		ra(a);
+	else if ((*a)->next == highest_node)
+		rra(a);
+	if ((*a)->value > (*a)->next->value)
+		sa(a);
 }

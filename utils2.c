@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 23:10:02 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 16:19:45 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 20:04:57 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	ft_stack_add_back(t_stack_node **lst, t_stack_node *new)
 }
 
 static long	ft_check_sign_digit(const char *str, int *i,
-			t_stack_node **stack)
+		t_stack_node **stack)
 {
 	long	sign;
 
@@ -83,4 +83,11 @@ long	ft_atoi_digit(const char *str, t_stack_node **stack)
 	if (str[i] != '\0')
 		handle_error(stack);
 	return (sign * result);
+}
+
+void	ft_delone(t_stack_node *node)
+{
+	if (!node)
+		return ;
+	free(node);
 }

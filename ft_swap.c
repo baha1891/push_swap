@@ -6,13 +6,13 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:03:24 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/16 16:24:36 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/16 18:46:33 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_swap(t_stack_node **stack)
+static void	ft_swap(t_stack_node **stack)
 {
 	t_stack_node	*first;
 	t_stack_node	*second;
