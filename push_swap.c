@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/10 19:08:24 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/17 02:19:00 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/17 02:50:54 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 void	choose_sort(t_stack_node **a, t_stack_node **b)
 {
 	if (stack_len(*a) == 2)
-		sa(a, true);
+	{
+		if ((*a)->value > (*a)->next->value)
+			sa(a, true);
+	}
 	else if (stack_len(*a) == 3)
 		sort_three(a);
 	else

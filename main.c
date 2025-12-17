@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 22:19:33 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/17 02:18:35 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/17 03:04:17 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ int	main(int argc, char **argv)
 	init_stack_a(&a, argv);
 	if (argc == 2)
 		free_matrix(argv);
-	choose_sort(&a, &b);
+	if (!stack_sorted(a))
+		choose_sort(&a, &b);
 	ft_stack_clear(&a);
 	return (0);
 }
