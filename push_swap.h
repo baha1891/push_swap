@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 22:20:22 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/17 02:17:34 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/18 23:51:45 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void			pa(t_stack_node **a, t_stack_node **b);
 void			pb(t_stack_node **a, t_stack_node **b);
 
 /* Lib Helpers */
-long			ft_atoi_digit(const char *str, t_stack_node **stack);
+long			ft_atol_digit(const char *str, t_stack_node **stack);
 size_t			ft_strlcpy(char *dest, const char *src, size_t destsize);
 
 #endif

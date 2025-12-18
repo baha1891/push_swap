@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 23:10:02 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/17 02:25:58 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/18 23:52:24 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static long	ft_check_sign_digit(const char *str, int *i,
 	return (sign);
 }
 
-long	ft_atoi_digit(const char *str, t_stack_node **stack)
+long	ft_atol_digit(const char *str, t_stack_node **stack)
 {
 	long	sign;
 	long	result;

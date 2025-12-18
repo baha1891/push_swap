@@ -6,7 +6,7 @@
 /*   By: balsayed <balsayed@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 20:23:03 by balsayed          #+#    #+#             */
-/*   Updated: 2025/12/17 02:21:03 by balsayed         ###   ########.fr       */
+/*   Updated: 2025/12/18 23:50:25 by balsayed         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	i = 0;
 	while (argv[i])
 	{
-		n = ft_atoi_digit(argv[i], a);
+		n = ft_atol_digit(argv[i], a);
 		if (error_duplicate(*a, (int)n))
 			handle_error(a);
 		ft_stack_add_back(a, ft_stack_new((int)n));
